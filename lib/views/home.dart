@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
               height: 30,
             ),
             Text(
-              "Found your favorite course",
+              "Find your favorite course",
               style: TextStyle(
                   color: Color.fromARGB(255, 3, 26, 46), fontSize: 30),
             ),
@@ -50,7 +50,8 @@ class Home extends StatelessWidget {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  hintText: " Search for a course",
+                  hintText: " Search for course",
+                  hintStyle: TextStyle(color: Colors.grey),
                   suffixIcon: Icon(
                     Icons.search,
                     color: Colors.black,
@@ -159,7 +160,7 @@ class Home extends StatelessWidget {
               height: 30,
             ),
             SizedBox(
-                height: 100,
+                height: 150,
                 child: ListView(scrollDirection: Axis.horizontal, children: [
                   Container(
                     width: 300,
