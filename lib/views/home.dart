@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
               height: 30,
             ),
             Text(
-              "Found your favorite course",
+              "Find your favorite course",
               style: TextStyle(
                   color: Color.fromARGB(255, 3, 26, 46), fontSize: 30),
             ),
@@ -50,7 +50,8 @@ class Home extends StatelessWidget {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  hintText: " Search for a course",
+                  hintText: " Search for course",
+                  hintStyle: TextStyle(color: Colors.grey),
                   suffixIcon: Icon(
                     Icons.search,
                     color: Colors.black,
@@ -94,7 +95,48 @@ class Home extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-             Row(
+            SizedBox(
+              height: 100,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 106, 152, 189),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 28, 177, 112),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 50, 100, 21),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Row(
               children: [
                 Text(
                   "Popular",
@@ -107,135 +149,235 @@ class Home extends StatelessWidget {
                 Text(
                   "See all",
                   style: TextStyle(fontSize: 15, color: Colors.grey),
-                )
+                ),
+                SizedBox(height: 10,),
+
+                
               ],
+              
             ),
-            SizedBox(height: 30),
-            /* ListView(
-             scrollDirection: Axis.horizontal, 
-              children: [
-                Container(
-                  width: 300,
-                  height: 200,
-                  child: Text("hellooooo"),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color.fromARGB(255, 3, 40, 100),
-                  
-                  ),
-                )
-              ],
-            ) */
-           /*  Container(
-              width: 300,
-              height: 250,
-              decoration: BoxDecoration(
-                color: Colors.red
-              ),
-              child: Text("hello"),
-            ) */
             SizedBox(
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
+              height: 30,
+            ),
+            SizedBox(
+                height: 150,
+                child: ListView(scrollDirection: Axis.horizontal, children: [
                   Container(
-              width: 100,
-              height: 100,
-              padding: EdgeInsets.all(20),
-
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 106, 152, 189),
-                borderRadius: BorderRadius.circular(20),
-
-
-              ),
-             
-            ),
-            SizedBox(width: 10,),
-            Container(
-              width: 100,
-              height: 100,
-              padding: EdgeInsets.all(20),
-
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 28, 177, 112),
-                borderRadius: BorderRadius.circular(20),
-
-
-              ),
-             
-            ),
-            SizedBox(width: 10,),
-            Container(
-              width: 100,
-              height: 100,
-              padding: EdgeInsets.all(20),
-
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 50, 100, 21),
-                borderRadius: BorderRadius.circular(20),
-
-
-              ),
-             
-            ),
-                ],
-              ),
-            ),
-            SizedBox(height: 30,),
-            Container(
-              width: 300,
-              height: 200,
-              padding: EdgeInsets.all(20),
-
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 7, 62, 108),
-                borderRadius: BorderRadius.circular(20),
-
-
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    "assets/images/card.png",
-                    width: 100,
-                    height: 200,
-                  ),
-                  SizedBox(width: 20,),
-                  Container(
-                    alignment: Alignment.center,
-                    width: 100,
-                    height: 200,
-                    child: Column(
+                    width: 300,
+                    height: 100,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 7, 62, 108),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      
                       children: [
-                        Text("UI/UX Design with Figma",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w800),),
-                        SizedBox(height: 2,),
-                        Row(
-                          children: [
-                            Icon(Icons.star,color: Color.fromARGB(255, 244, 138, 26),),
-                            
-                            SizedBox(width: 5,),
-                            Text("4.9  (37 Reviews)",style: TextStyle(color:Colors.white, fontWeight: FontWeight.w100, fontSize: 12),)
-                          ],
+                        Image.asset(
+                          "assets/images/card.png",
+                          width: 100,
+                          height: 200,
                         ),
-                        SizedBox(height: 2,),
-                        Text("25 classes",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 12),)
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                            alignment: Alignment.center,
+                            width: 100,
+                            height: 200,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "UI/UX Design with Figma",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Color.fromARGB(255, 244, 138, 26),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      "4.9  (37 Reviews)",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w100,
+                                          fontSize: 12),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Text(
+                                  "25 classes",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12),
+                                )
+                              ],
+                            ))
                       ],
-                      )
-                    
-                    
-                  )
-                ],
-              ),
-            ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    width: 300,
+                    height: 100,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 7, 62, 108),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/images/card.png",
+                          width: 100,
+                          height: 200,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                            alignment: Alignment.center,
+                            width: 100,
+                            height: 200,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "UI/UX Design with Figma",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Color.fromARGB(255, 244, 138, 26),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      "4.9  (37 Reviews)",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w100,
+                                          fontSize: 12),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Text(
+                                  "25 classes",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12),
+                                )
+                              ],
+                            ))
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    width: 300,
+                    height: 100,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 7, 62, 108),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/images/card.png",
+                          width: 100,
+                          height: 200,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                            alignment: Alignment.center,
+                            width: 100,
+                            height: 200,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "UI/UX Design with Figma",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Color.fromARGB(255, 244, 138, 26),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      "4.9  (37 Reviews)",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w100,
+                                          fontSize: 12),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Text(
+                                  "25 classes",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 12),
+                                )
+                              ],
+                            ))
+                      ],
+                    ),
+                  ),
+                ]))
 
-
-
-          /* SizedBox(
+            /* SizedBox(
             height: 100,
             child: ListView(
               scrollDirection: Axis.horizontal,
