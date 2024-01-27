@@ -75,7 +75,7 @@ class Home extends StatelessWidget {
             ),
             SizedBox(
               height: 30,
-            ),
+            ),/* 
             Container(
              child: ListView(
                   padding: EdgeInsets.zero,
@@ -103,7 +103,7 @@ class Home extends StatelessWidget {
                     ...myCards.map((e) => MyCard(category: e)).toList()
                   ],
                 ),
-            )
+            ) */
           ],
         ),
       ),
