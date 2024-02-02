@@ -15,11 +15,11 @@ cardColor: Color.fromARGB(255, 219, 128, 95)
 Category(
 text:"Graphic Design",
 image:"assets/images/test.jpg",
-cardColor: Color.fromARGB(255, 104, 205, 141)
+cardColor: Color.fromARGB(255, 48, 149, 85)
 ),
 Category(
 text:"Digital Marketing",
 image:"assets/images/test.jpg",
-cardColor: Color.fromARGB(255, 108, 216, 116)
+cardColor: Color.fromARGB(255, 52, 184, 61)
 )
 ];
